@@ -8,14 +8,18 @@ Construir um Data Warehouse a partir de dados de faturas de cartao de credito, a
 - Python (pandas)
 - SQLite
 - SQLAlchemy
-- Streamlit
-- Plotly
+- FastAPI
+- Vue 3 (Vite)
+- Plotly.js
 
 ## Estrutura
-- etl/: scripts ETL
-- sql/: criacao de tabelas e queries
+- api.py: backend Python para disponibilizar os dados
+- database.py: configuracao SQLite + SQLAlchemy
+- models.py: modelos ORM
+- data_processing.py: tratamento e persistencia dos CSVs
+- utils.py: funcoes auxiliares
 - dados/: arquivos CSV
-- dashboard/: aplicacao interativa para analise
+- frontend/: aplicacao Vue do dashboard
 
 ## Execução
 1. Instale dependências:
@@ -23,11 +27,16 @@ Construir um Data Warehouse a partir de dados de faturas de cartao de credito, a
 
 2. Coloque os CSVs na pasta dados/
 
-3. Execute o ETL:
-   python etl/main.py
+3. Inicie o backend Python:
+   python -m uvicorn api:app --host 127.0.0.1 --port 8000
 
-4. Execute o dashboard:
-   python -m streamlit run dashboard/app.py
+4. Em outro terminal, inicie o frontend:
+   cd frontend
+   npm install
+   npm run dev
+
+5. Opcional: execute o ETL dimensional legado:
+   python etl/main.py
 
 ## Consultas
 Veja sql/queries.sql

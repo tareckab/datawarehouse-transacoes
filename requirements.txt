@@ -1,4 +1,4 @@
-pandas
-sqlalchemy
-streamlit
-plotly
+pandas>=2.0
+SQLAlchemy>=2.0
+fastapi>=0.110
+uvicorn[standard]>=0.29
