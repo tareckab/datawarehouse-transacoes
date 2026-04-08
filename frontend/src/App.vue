@@ -95,7 +95,7 @@ onMounted(async () => {
   min-height: 100vh;
   height: auto;
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns:0.2fr 1fr;
   gap: 12px;
   padding: 12px;
   background: #ffffff;
@@ -110,7 +110,7 @@ onMounted(async () => {
 
 .content {
   display: grid;
-  grid-template-rows: auto auto ;
+  grid-template-rows: 0.1fr ;
   gap: 12px;
   height: 100%;
   min-height: 0;
@@ -127,12 +127,12 @@ onMounted(async () => {
 
 .charts-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px 500px;
+ 
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  height: 100%;
+
   gap: 10px;
-  min-height: auto;
-  height: auto;
-  overflow: visible;
 }
 
 @media (max-width: 1200px) {

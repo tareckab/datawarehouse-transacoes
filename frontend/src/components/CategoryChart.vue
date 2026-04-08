@@ -177,9 +177,6 @@ onMounted(async () => {
   min-height: 0;
 }
 
-.full-width .chart {
-  min-height: 0;
-}
 
 .no-data {
   margin: 0;
